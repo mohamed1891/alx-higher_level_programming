@@ -1,5 +1,5 @@
 -- Selecting the city and calculating the average temperature
-SELECT
+SELECT 
     `city`,                             -- City column
     AVG(`value`) AS `avg_temp`          -- Average temperature column (aliased as avg_temp)
 FROM
