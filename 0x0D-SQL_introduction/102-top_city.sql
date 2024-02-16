@@ -12,4 +12,3 @@ ORDER BY
     `avg_temp`                         -- Ordering the results by average temperature
 LIMIT
     3;                                  -- Limiting the number of results to 3
-
