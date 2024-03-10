@@ -11,6 +11,3 @@ def fizzbuzz():
         else:
             print(f"{i} ", end="")
     print()  # For a new line at the end of the sequence
-
-# Call the function
-fizzbuzz()
