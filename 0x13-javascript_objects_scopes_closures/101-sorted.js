@@ -1,14 +1,14 @@
 #!/usr/bin/node
+
 const dict = require('./101-data.js').dict;
 
-const myDict = {};
-
-for (const key in dict) {
-  const value = dict[key]; 
-  if (!myDict[value]) {
-	myDict[value] = [];
+const sortedDict = {};
+for (const userId in dict) {
+  const occurrences = dict[userId];
+  if (occurrences in sortedDict) {
+    sortedDict[occurrences].push(userId);
+  } else {
+    sortedDict[occurrences] = [userId];
   }
-  myDict[value].push(key);
 }
-
-console.log(myDict);
+console.log(sortedDict);
