@@ -1,6 +1,7 @@
 #!/usr/bin/node
 
 // A class Rectangle that defines a rectangle
+
 class Rectangle {
   constructor (w, h) {
     // Initialize the instance attribute 'width' with the value of 'w'
