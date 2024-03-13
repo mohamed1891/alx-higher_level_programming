@@ -1,13 +1,14 @@
 #!/usr/bin/node
+const dict = require('./101-data.js').dict;
 
-const dict = require('./101-data').dict;
-const valuesArray = Object.values(dict);
-valuesArray.sort((a, b) => a - b);
-const keysByValue = {};
+const myDict = {};
+
 for (const key in dict) {
-  const value = dict[key];
-  if (!keysByValue[value]) {
-    keysByValue[value] = [];
+  const value = dict[key]; 
+  if (!myDict[value]) {
+	myDict[value] = [];
   }
-  keysByValue[value].push(key);
+  myDict[value].push(key);
 }
+
+console.log(myDict);
