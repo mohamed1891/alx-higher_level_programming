@@ -1,36 +1,36 @@
 #!/usr/bin/node
 
 class Rectangle {
-    constructor(w, h) {
-        if (w <= 0 || h <= 0) {
-            this.width = 0;
-            this.height = 0;
-        } else {
-            this.width = w;
-            this.height = h;
-        }
+  constructor (w, h) {
+    if (w <= 0 || h <= 0) {
+      this.width = 0;
+      this.height = 0;
+    } else {
+      this.width = w;
+      this.height = h;
     }
+  }
 
-    print() {
-        for (let i = 0; i < this.height; i++) {
-            console.log('X'.repeat(this.width));
-        }
+  print () {
+    for (let i = 0; i < this.height; i++) {
+      console.log('X'.repeat(this.width));
     }
+  }
 
-    rotate() {
-        [this.width, this.height] = [this.height, this.width];
-    }
+  rotate () {
+    [this.width, this.height] = [this.height, this.width];
+  }
 
-    double() {
-        this.width *= 2;
-        this.height *= 2;
-    }
+  double () {
+    this.width *= 2;
+    this.height *= 2;
+  }
 }
 
 class Square extends Rectangle {
-    constructor(size) {
-        // Call the constructor of Rectangle with size as both width and height
-        super(size, size);
-    }
+  constructor (size) {
+    // Call the constructor of Rectangle with size as both width and height
+    super(size, size);
+  }
 }
-module.exports = Square
+module.exports = Square;
