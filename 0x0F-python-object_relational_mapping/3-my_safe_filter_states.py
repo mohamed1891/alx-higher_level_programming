@@ -6,8 +6,6 @@ import MySQLdb
 
 
 if __name__ == '__main__':
-     """Function that connects to MySQL server on localhost at port 3306"""
-
     if len(sys.argv) == 5:
         mydb = MySQLdb.connect(
             host='localhost',
