@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-A script that creates the State “California” with
-the City “San Francisco” from the database
+A script that creates the State California with the City San Francisco
+from the database hbtn_0e_100_usa
 """
 
 from relationship_state import Base, State
@@ -11,6 +11,8 @@ from relationship_city import City
 from sys import argv
 
 if __name__ == "__main__":
+    """Function that connects to MySQL server on localhost at port 3306"""
+
     db = 'mysql+mysqldb://{}:{}@localhost:3306/{}'.format(argv[1], argv[2],
                                                           argv[3])
     engine = create_engine(db)
