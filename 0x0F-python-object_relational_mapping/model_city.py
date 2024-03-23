@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
-A python file that contains class definition of City
-and instance Base = declarative_base()
+Contains the class definition of a City
 """
 
 from sqlalchemy import Column, Integer, String, ForeignKey
