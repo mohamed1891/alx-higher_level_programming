@@ -8,7 +8,7 @@ def find_peak(list_of_integers):
     # Check if the list is empty
     if list_of_integers is None or list_of_integers == []:
         return None
-    
+
     # Define search boundaries
     lo = 0
     hi = len(list_of_integers)
@@ -27,12 +27,11 @@ def find_peak(list_of_integers):
     if list_of_integers[mid] >= list_of_integers[mid - 1] and \
             list_of_integers[mid] >= list_of_integers[mid + 1]:
         return list_of_integers[mid]
-    
+
     # Recursively search in the right half of the list
     if mid > 0 and list_of_integers[mid] < list_of_integers[mid + 1]:
         return find_peak(list_of_integers[mid:])
-    
+
     # Recursively search in the left half of the list
     if mid > 0 and list_of_integers[mid] < list_of_integers[mid - 1]:
         return find_peak(list_of_integers[:mid])
-
