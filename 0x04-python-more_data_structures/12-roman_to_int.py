@@ -22,8 +22,8 @@ def roman_to_int(roman_string):
     # Iterate through the Roman string from left to right
     for i in range(len(roman_string)):
         current_value = roman_values.get(roman_string[i], 0)
-        next_value = roman_values.get
-        (roman_string[i + 1], 0) if i + 1 < len(roman_string) else 0
+        next_value = roman_values.get(roman_string[i + 1], 0)
+        if (i + 1) < len(roman_string) else 0
 
         # If the current value is less than the next value, subtract it
         if current_value < next_value:
