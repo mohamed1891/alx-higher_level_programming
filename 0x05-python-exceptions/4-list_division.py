@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 
-isin = isinstance
-
 def list_division(ls_1, ls_2, list_length):
     result = []
     for i in range(list_length):
@@ -12,7 +10,7 @@ def list_division(ls_1, ls_2, list_length):
                 result.append(0)
             else:
                 # Check if the elements are numbers
-                if not isin(ls_1[i], (int, float)) or not isin(ls_2[i], (int, float)):
+                if not isinstance(ls_1[i], (int, float)) or not isinstance(ls_2[i], (int, float)):
                     print("wrong type")
                     result.append(0)
                 else:
