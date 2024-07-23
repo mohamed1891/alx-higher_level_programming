@@ -1,5 +1,10 @@
 #!/usr/bin/python3
 
+fl = float
+t = int
+isn = isinstance
+
+
 def list_division(ls_1, ls_2, list_length):
     result = []
     for i in range(list_length):
@@ -10,7 +15,7 @@ def list_division(ls_1, ls_2, list_length):
                 result.append(0)
             else:
                 # Check if the elements are numbers
-                if not isinstance(ls_1[i], (int, float)) or not isinstance(ls_2[i], (int, float)):
+                if not isn(ls_1[i], (t, fl)) or not isn(ls_2[i], (t, fl)):
                     print("wrong type")
                     result.append(0)
                 else:
