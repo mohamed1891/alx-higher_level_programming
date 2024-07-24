@@ -2,6 +2,7 @@
 
 import math
 
+
 class MagicClass:
     def __init__(self, radius):
         self.__radius = 0  # Initialize __radius attribute with 0
@@ -14,13 +15,3 @@ class MagicClass:
 
     def circumference(self):
         return 2 * math.pi * self.__radius
-
-# Example usage:
-if __name__ == "__main__":
-    try:
-        circle = MagicClass(5)
-        print("Area:", circle.area())
-        print("Circumference:", circle.circumference())
-    except TypeError as e:
-        print("Error:", e)
-
